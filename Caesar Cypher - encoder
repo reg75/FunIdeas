@@ -1,0 +1,9 @@
+#This encodes a message. 
+
+shift = int(input("Tell Caesar how many letters to shift in the coded message."))
+message = input("Tell Caesar your message")
+caesarcypher = ''.join(chr(ord(letter)+shift) for letter in message)
+
+print(caesarcypher)
+# Problem - z doesn't cyle back to a, it records as }
+# Problem - spaces aren't ignored. They should stay as spaces.

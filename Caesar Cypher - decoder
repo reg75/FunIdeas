@@ -1,0 +1,15 @@
+#This outputs the possible solutions to an encoded message.
+#Problem: Doesn't just include letters - also includes other characters. 
+#Problem: Spaces don't appear as spaces, they appear as a character. 
+#Problem: Not all possible solutions are complete - might be because of empty characters? 
+code = (input("Tell Caesar your coded message."))
+shift = 0 
+
+while shift <= 25:
+  message = ''.join(chr(ord(letter) - shift) for letter in code)
+  print(message)
+  shift += 1
+  
+#Eventually, the code won't print all possible outcomes.
+#The code will/should check outcomes against a list of most common English words, and record the best match. 
+#There should be an option to reject best match + scroll/view others

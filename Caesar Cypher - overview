@@ -1,0 +1,8 @@
+Print a brief explanation of what the Caesar Cypher is. 
+Take a message from the user.
+Ask user by how many steps they would like to shift the alphabet.
+Output a coded message encrpyted by the right number of shifts. 
+
+?Give option to break a Caesar code by returning all 26 possible shifts.
+?Could it output the correct answer by comparing words in output with matches against a dictionary? (could create top ten words list: The, of, and, to, in, is, you, that, it, he, was, for, are, as, with, his, they, at, be, this)
+?The output with the most matches would be displayed as the dictionary match. 

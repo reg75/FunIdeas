@@ -1,5 +1,38 @@
 key_terms = [anicca, anatta, dukkha]
 
+term = "anicca"
+ans = input("What is meant by " + term + "? (2 marks)")
+definition = ["impermanence", "impermanent", "Impermanence", "Impermanent", "permanent"]
+dev = ["three marks", "three universal", "3 marks", "3 universal", "Buddha's teaching", "all things", "nothing", "for example", "For example", "E.g."]
+def_mk = 0
+dev_mk = 0
+tot_mk = 0
+
+for i in definition:
+  if i in ans:
+    def_mk += 1
+if def_mk > 0:
+  tot_mk += 1
+  
+
+for i in dev:
+  if i in ans:
+    dev_mk += 1
+if dev_mk > 0:
+  tot_mk += 1
+  
+print(tot_mk)
+if tot_mk == 2:
+  print("well done")
+if def_mk == 0:
+  print("EBI: Lean the definition of the key term: " + term)
+else: 
+  print("WWW: Can define the key term: " + term)
+if dev_mk == 0:
+  print("EBI: Ensure you support your definition with a relevant development point")
+else: 
+  print("WWW: Supports definition with relevant development point.")
+
 Better for 8 mark answers? Can include sentence constructors. 
 
 ans = "student answer"

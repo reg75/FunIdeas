@@ -1,0 +1,47 @@
+# This program turns and input sentence into something more Shakesperean.
+
+import random
+
+start_no = random.randrange(0, 4)
+openings = ["Verily!", "Forsooth!", "Troth Sir!", "Hail fellow well met!", "Hail to thee!"]
+start = openings[start_no]
+
+text = input("Enter a sentence. I will try to make it more Shakesperean\n")
+
+a = text.replace("be ", "beest ")
+b = a.replace("have ", "hast ")
+c = b.replace("has ", "hath ")
+d = c.replace("you ", "thou ")
+e = d.replace("do ", "dost ")
+f = e.replace("does ", "doth ")
+g = f.replace("did ", "didst ")
+h = g.replace("says ", "saith ")
+i = h.replace("she ", "the shrew ")
+j = i.replace("her ", "the shrews ")
+k = j.replace("will ", "willst ")
+l = k.replace("would ", "wouldest ")
+m = l.replace("are ", "art ")
+n = m.replace("before ", "'ere ")
+o = n.replace("it is ", "tis ")
+p = o.replace("it was ", "twas ")
+q = p.replace("were ", "wast ")
+r = q.replace("from where ", "whence ")
+s = r.replace("why ", "wherefore ")
+t = s.replace("from here ", "hence ")
+u = t.replace("often ", "oft ")
+v = u.replace("even ", "yea ")
+w = v.replace("that ", "yonder ")
+x = w.replace("wish ", "would ")
+y = x.replace("shit ", "marry ")
+z = y.replace("fuck ", "fucketh ")
+aa = z.replace("no ", "nay ")
+bb = aa.replace("hurry ", "hie ")
+cc = bb.replace("yes ", "ay ")
+dd = cc.replace("your ", "thy ")
+ee = dd.replace("yours ", "thine ")
+ff = ee.replace("my ", "mine ")
+gg = ff.replace("hello ", "good morrow ")
+hh = gg.replace("he ", "the fellow ")
+ii = hh.replace("his ", "the fellow's ")
+
+print(start + " " + ii)

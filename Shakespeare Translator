@@ -5,7 +5,7 @@
 import random
 
 start_no = random.randrange(0, 4)
-openings = ["Verily,", "Forsooth,", "Troth sir,", "Hail fellow well met,", "Good, morrow"]
+openings = ["Verily,", "Forsooth,", "Troth sir,", "Hail fellow well met,", "Good morrow"]
 start = openings[start_no]
 
 # Input

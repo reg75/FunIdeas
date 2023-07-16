@@ -1,9 +1,19 @@
+
 #This encodes a message. 
 
-shift = int(input("Tell Caesar how many letters to shift in the coded message."))
-message = input("Tell Caesar your message")
-caesarcypher = ''.join(chr(ord(letter)+shift) for letter in message)
-
-print(caesarcypher)
-# Problem - z doesn't cyle back to a, it records as }
-# Problem - spaces aren't ignored. They should stay as spaces.
+list = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+charset = len(list)
+cypher = int(input("How many characters would you like to shift? Type a number from -35 (backward shift) to 35 (forward shift)."))
+msg = input("type a message")
+output = ""
+for i in msg:
+    if i in list:
+        index = list.index(i)
+        if index + cypher > 35:
+                output += (list[index+cypher-35])
+        elif index + cypher < 1:
+                output += (list[index+cypher+34])
+        else:
+                output += (list[index+cypher])
+print(output)
+print(charset)

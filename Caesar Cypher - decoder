@@ -1,15 +1,22 @@
-#This outputs the possible solutions to an encoded message.
-#Problem: Doesn't just include letters - also includes other characters. 
-#Problem: Spaces don't appear as spaces, they appear as a character. 
-#Problem: Not all possible solutions are complete - might be because of empty characters? 
-code = (input("Tell Caesar your coded message."))
-shift = 0 
+#list = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+charset = len(list)
+msg = input("type an encoded message")
+shift = 1
+outputlist = []
 
-while shift <= 25:
-  message = ''.join(chr(ord(letter) - shift) for letter in code)
-  print(message)
+for tries in range(35):
+  output = ""
+  for i in msg:
+    if i == " ":
+      output += i
+    else: 
+      if i in list:
+        index = list.index(i)
+        if index + shift > 35:
+          output += (list[index+shift-35])
+        else: 
+          output += (list[index+shift])
+  outputlist.append(output)
   shift += 1
-  
-#Eventually, the code won't print all possible outcomes.
-#The code will/should check outcomes against a list of most common English words, and record the best match. 
-#There should be an option to reject best match + scroll/view others
+    
+print(outputlist)
